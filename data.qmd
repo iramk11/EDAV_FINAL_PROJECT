@@ -1,6 +1,14 @@
 ## Technical Description
 
-Data for this project come from the Electric Vehicle Population Data, a publicly available dataset and a derivative of the Washington State Department of Licensing. This is a huge set of data about the EV registered with Washington State: vehicle make and model, type - Battery Electric Vehicle or Plug-in Hybrid Electric Vehicle, Electric Range, Base MSRP -, and geography - county, and city of registration. The data set is a treasure trove of information on the EV diffusion processes in one of the leading regions of the United States.
+Data for this project comes from the Electric Vehicle Population Data, a publicly available dataset from the Washington State Department of Licensing. This is a huge set of data about the EV registered with Washington State and has the following information: 
+Vehicle - make and model
+Type - Battery Electric Vehicle or Plug-in Hybrid Electric Vehicle
+Electric Range 
+Base MSRP  
+Geography - county
+City of registration 
+
+The data set is a treasure trove of information on the EV diffusion processes in one of the leading regions of the United States.
 
 Data Collection and Format
 This information has been collected from lists of vehicles that the Washington State Department of Licensing maintains. Data is administratively collected through registration and updating vehicle lists. The dataset is in CSV format and presents 210,165 records and 17 variables. The presented dataset combines numeric, categorical, and geographic variables.
@@ -11,7 +19,7 @@ While frequency is not directly stated, all vehicle registration datasets do nat
 
 ## Missing value analysis
 Known Issues and Limitations
-The following are issues that were noted during preliminary exploration:
+The following are issues that were noted during exploration:
 
 Missing Values: 
 Some missing values do exist in a few columns, like Legislative District, Vehicle Location, and Electric Range. This reduces the scope when analyzing some of these variables.
@@ -43,7 +51,7 @@ plot(img)
 
 
 ```
-Bar Graph: A graph representing the percent of missed values within the columns; the worst hit is found in the legislative District. The above bar plot quantitatively views the missing data column-wise in terms of their percentages. The highest rate of missing value is in the Legislative District column which is about 0.21%, hence the most affected variable in the dataset. Other columns include Vehicle Location, Electric Range, and Base MSRP. These all contain very few missing values, under 0.01%, and are relatively complete, probably without a huge effect on the analysis. Overall, this data is pretty complete; there are only a few columns in the entire set with missing information.
+Bar Graph: A graph representing the percent of missed values within the columns; the worst hit is found in the legislative District. The above bar plot quantitatively views the missing data in terms of their percentages. The highest rate of missing value is in the Legislative District column which is about 0.21%, hence the most affected variable in the dataset. Other columns include Vehicle Location, Electric Range, and Base MSRP. These all contain very few missing values, under 0.01%, and are relatively complete, probably without a huge effect on the analysis. Overall, this data is pretty complete; there are only a few columns in the entire set with missing information.
 
 ```{r}
 
