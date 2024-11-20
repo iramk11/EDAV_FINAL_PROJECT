@@ -2,22 +2,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "YOUR PROJECT TITLE",
+    "title": "Charged and Ready: Insights into Electric Vehicle Adoption",
     "section": "",
-    "text": "1 Introduction"
+    "text": "1 Introduction\nThe shift towards electric vehicles (EVs) represents a crucial step in reducing greenhouse gas emissions and mitigating the effects of climate change. With governments worldwide pressing for greener altern­atives, understanding the current landscape of electric vehicle adoption is key to effective policy and infrastructure. We have chosen this topic because electric vehicles are at the forefront in this transition to sustainable transport, and their adoption provides valuable information about consumer behavior, technology advances, and regional trends.\nElectric Vehicle Population data will be used to analyze the trends of distribution, characteristics, and adoption of electric vehicles across regions. Data regarding vehicle type, electric range, base MSRP, and geographic location will aid in answering specific questions:\nWhat are the most popular EV models? How do electric ranges and costs vary across regions? What geographic patterns emerge in EV adoption?\nThis analysis will highlight a few major driving factors in the adoption of EVs and what challenges are to be met for such wide usage. By analyzing this dataset, we hope to find meaningful insights that will assist policymakers, utility companies, and carmakers in accelerating the process of electric vehicle adaptation.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
   },
   {
-    "objectID": "data.html#description",
-    "href": "data.html#description",
-    "title": "2  Data",
-    "section": "2.1 Description",
-    "text": "2.1 Description"
-  },
-  {
-    "objectID": "data.html#missing-value-analysis",
-    "href": "data.html#missing-value-analysis",
-    "title": "2  Data",
-    "section": "2.2 Missing value analysis",
-    "text": "2.2 Missing value analysis"
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "2  Technical Description",
+    "section": "",
+    "text": "2.1 Missing value analysis\nKnown Issues and Limitations The following are issues that were noted during preliminary exploration:\nMissing Values: Some missing values do exist in a few columns, like Legislative District, Vehicle Location, and Electric Range. This reduces the scope when analyzing some of these variables.\nGeographical scope: The given dataset doesn’t enable the view on nationwide or global views of how electric vehicle adoption is going on; it’s restricted to Washington State only.\nOutdated records: Records may not get updated often, and recent registrations or changes may not be reflected.\nData Cleaning: Categorical values or geographic identifiers may have inconsistencies that will need cleaning.\nData Import Plan: This is freely downloadable from the Data.gov catalog, in CSV format. First, this data was imported into this project using Python, where preliminary cleaning and some exploration had been done. Later, it would be loaded into R for analysis and visualization. This dataset provides a robust foundation for analyzing EV adoption and identifying trends, despite its geographic limitations and minor data quality issues.\nCode\n#install.packages(\"magick\")\nlibrary(magick)\n\n\nLinking to ImageMagick 6.9.12.93\nEnabled features: cairo, fontconfig, freetype, heic, lcms, pango, raw, rsvg, webp\nDisabled features: fftw, ghostscript, x11\n\n\nCode\n# Load the image\nimg &lt;- image_read(\"~/Desktop/edavfinalproj1.png\")\n\n# Plot the image\nplot(img)\nBar Graph: A graph representing the percent of missed values within the columns; the worst hit is found in the legislative District. The above bar plot quantitatively views the missing data column-wise in terms of their percentages. The highest rate of missing value is in the Legislative District column which is about 0.21%, hence the most affected variable in the dataset. Other columns include Vehicle Location, Electric Range, and Base MSRP. These all contain very few missing values, under 0.01%, and are relatively complete, probably without a huge effect on the analysis. Overall, this data is pretty complete; there are only a few columns in the entire set with missing information.\nCode\n# Load the image\nimg &lt;- image_read(\"~/Desktop/edavfinalproj2.png\")\n\n# Plot the image\nimage_scale(img,\"80%\") \n\n\n\n\n\n\n\n\n\nCode\n#plot(img)\nThe following heatmap shows the pattern of missing values across the dataset. Each vertical band here represents a column, with highlighted areas showing missing values. Most of the rows are fully filled, and the rest hold few missing values. There is no indication that the missing values clustered in rows, which therefore are most likely to be random and not related to some particular sub-set of the data. The columns most affected-only showing continuous gaps-include the Legislative District. This heat map confirms that the missing data points are not pervasive and affect only a small subset of the data.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Technical Description</span>"
+    ]
   }
 ]
